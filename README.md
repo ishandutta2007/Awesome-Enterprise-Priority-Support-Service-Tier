@@ -57,7 +57,7 @@ Self-hosted open-source helpdesk and service desk systems provide full control o
 
 The table below is sorted in descending order by GitHub stargazer count.
 
-| Project | Star Badge | Tech Stack | Key Capabilities & SLA Features |
+| Project | Stars_Badge | Tech Stack | Key Capabilities & SLA Features |
 |:---|:---|:---|:---|
 | **[Chatwoot](https://github.com/chatwoot/chatwoot)** | [![Stars](https://img.shields.io/github/stars/chatwoot/chatwoot?style=social&color=white)](https://github.com/chatwoot/chatwoot/stargazers) | Ruby / Vue.js | Modern omnichannel customer engagement suite. Unifies website live-chat, email, WhatsApp, Twitter/X, and Telegram into a unified inbox with custom webhook integrations. |
 | **[UVdesk](https://github.com/uvdesk/community-skeleton)** | [![Stars](https://img.shields.io/github/stars/uvdesk/community-skeleton?style=social&color=white)](https://github.com/uvdesk/community-skeleton/stargazers) | PHP (Symfony) | Modular, enterprise-ready helpdesk ticketing system. Supports multi-channel ticket conversion, extensible workflow events, automated ticket forwarding, and agent privilege control. |
