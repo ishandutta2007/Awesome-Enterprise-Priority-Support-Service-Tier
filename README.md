@@ -1,6 +1,6 @@
 # Awesome-Enterprise-Priority-Support-Service-Tier
 
-# Top Enterprise Priority Support & Service Tier Ecosystem
+## Top Enterprise Priority Support & Service Tier Ecosystem
 
 **Curated List of SaaS Platforms & Open-Source GitHub Projects**  
 *Focused on SLA-Backed Support, Named Contacts & Self-Hosted Ticket Triage*  
