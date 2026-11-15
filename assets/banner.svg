@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b19" />
+      <stop offset="50%" stop-color="#0d1527" />
+      <stop offset="100%" stop-color="#050814" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="accent-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca" />
+      <stop offset="100%" stop-color="#ff0080" />
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+
+    <linearGradient id="glow-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7928ca" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effects -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 42px;
+        fill: #ffffff;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        fill: #94a3b8;
+      }
+      .tag-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+      .card-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        fill: #f1f5f9;
+      }
+      .card-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        fill: #64748b;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        fill: #e2e8f0;
+      }
+
+      /* Dynamic Animations (Kept strictly subtle in the background) */
+      @keyframes float-slow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes float-alt {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(8px); }
+      }
+      @keyframes pulse-orb {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.65; transform: scale(1.15); }
+      }
+      @keyframes sweep-line {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+      }
+
+      .floating-card-1 {
+        animation: float-slow 6s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: float-alt 7s ease-in-out infinite;
+      }
+      .orb-1 {
+        animation: pulse-orb 8s ease-in-out infinite;
+        transform-origin: 950px 140px;
+      }
+      .orb-2 {
+        animation: pulse-orb 10s ease-in-out infinite reverse;
+        transform-origin: 150px 320px;
+      }
+    </style>
+  </defs>
+
+  <!-- Deep Background Layer -->
+  <rect width="1200" height="420" fill="url(#bg-grad)" rx="16" />
+
+  <!-- Animated Ambient Orbs in Background -->
+  <g>
+    <circle class="orb-1" cx="950" cy="140" r="160" fill="#7928ca" opacity="0.35" filter="url(#glow)" />
+    <circle class="orb-2" cx="180" cy="320" r="140" fill="#00f2fe" opacity="0.25" filter="url(#glow)" />
+    <circle cx="1080" cy="300" r="100" fill="#ff0080" opacity="0.2" filter="url(#glow)" />
+  </g>
+
+  <!-- Subtle High-tech Grid Pattern in Background -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="420" stroke-dasharray="4,8" />
+    <line x1="300" y1="0" x2="300" y2="420" stroke-dasharray="4,8" />
+    <line x1="500" y1="0" x2="500" y2="420" stroke-dasharray="4,8" />
+    <line x1="700" y1="0" x2="700" y2="420" stroke-dasharray="4,8" />
+    <line x1="900" y1="0" x2="900" y2="420" stroke-dasharray="4,8" />
+    <line x1="1100" y1="0" x2="1100" y2="420" stroke-dasharray="4,8" />
+
+    <line x1="0" y1="80" x2="1200" y2="80" stroke-dasharray="4,8" />
+    <line x1="0" y1="200" x2="1200" y2="200" stroke-dasharray="4,8" />
+    <line x1="0" y1="320" x2="1200" y2="320" stroke-dasharray="4,8" />
+  </g>
+
+  <!-- Glowing Accent Horizon Line -->
+  <line x1="0" y1="418" x2="1200" y2="418" stroke="url(#accent-cyan)" stroke-width="3" opacity="0.8" />
+  <line x1="0" y1="2" x2="1200" y2="2" stroke="url(#accent-purple)" stroke-width="2" opacity="0.4" />
+
+  <!-- DYNAMIC RIGHT-SIDE CARDS & PILLS (Positioned in side-panel away from title/subtitle) -->
+  <g class="floating-card-1" filter="url(#card-shadow)">
+    <!-- SLA & Response Time Card -->
+    <rect x="790" y="70" width="340" height="95" rx="14" fill="url(#card-grad)" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="825" cy="117" r="22" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1.5" />
+    <!-- Clock / Pulse Icon -->
+    <path d="M825 106 V117 L833 122" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" fill="none" />
+    <circle cx="825" cy="117" r="11" stroke="#38bdf8" stroke-width="1.5" fill="none" />
+    <text x="860" y="108" class="card-title">15-Minute Critical SLA</text>
+    <text x="860" y="130" class="card-sub">Guaranteed P1 Fast Response &amp; TAM</text>
+    <rect x="1045" y="85" width="65" height="22" rx="11" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <text x="1077" y="100" font-family="sans-serif" font-size="10" font-weight="700" fill="#34d399" text-anchor="middle">ACTIVE</text>
+  </g>
+
+  <g class="floating-card-2" filter="url(#card-shadow)">
+    <!-- Open-Source & Triage Card -->
+    <rect x="830" y="190" width="320" height="90" rx="14" fill="url(#card-grad)" stroke="#a855f7" stroke-opacity="0.3" stroke-width="1.5" />
+    <circle cx="865" cy="235" r="22" fill="#7928ca" fill-opacity="0.25" stroke="#c084fc" stroke-width="1.5" />
+    <!-- Shield / Server Icon -->
+    <path d="M865 221 L875 225 V235 C875 242 865 247 865 247 C865 247 855 242 855 235 V225 Z" stroke="#c084fc" stroke-width="1.8" fill="none" />
+    <text x="900" y="226" class="card-title">Self-Hosted L1/L2 Triage</text>
+    <text x="900" y="247" class="card-sub">Zero Per-Agent Commercial Fees</text>
+  </g>
+
+  <!-- High-Tech Feature Badges / Pills under the cards -->
+  <g class="floating-card-1">
+    <rect x="790" y="305" width="130" height="34" rx="17" fill="#0f172a" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="806" cy="322" r="4" fill="#38bdf8" />
+    <text x="818" y="327" class="pill-text">SaaS Ecosystem</text>
+
+    <rect x="930" y="305" width="125" height="34" rx="17" fill="#0f172a" stroke="#a855f7" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="946" cy="322" r="4" fill="#c084fc" />
+    <text x="958" y="327" class="pill-text">Open Source</text>
+
+    <rect x="1065" y="305" width="85" height="34" rx="17" fill="#0f172a" stroke="#34d399" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="1079" cy="322" r="4" fill="#34d399" />
+    <text x="1090" y="327" class="pill-text">SLAs</text>
+  </g>
+
+  <!-- FOREGROUND CONTENT: PROMINENT TITLE, TAG, AND SUBTITLE -->
+  <!-- Tag / Breadcrumb -->
+  <g>
+    <rect x="75" y="65" width="275" height="30" rx="15" fill="#0284c7" fill-opacity="0.18" stroke="#38bdf8" stroke-width="1" />
+    <circle cx="92" cy="80" r="5" fill="#00f2fe" filter="url(#glow)" />
+    <text x="108" y="85" class="tag-text">Enterprise Support Architecture</text>
+  </g>
+
+  <!-- Main Hero Title (Guaranteed clear foreground, no collision) -->
+  <g>
+    <text x="75" y="145" class="title-text">Awesome Enterprise</text>
+    <text x="75" y="195" class="title-text">
+      <tspan fill="url(#accent-cyan)">Priority Support</tspan> &amp; <tspan fill="url(#accent-purple)">Service Tiers</tspan>
+    </text>
+  </g>
+
+  <!-- Subtitle & Value Proposition -->
+  <g>
+    <text x="75" y="248" class="subtitle-text">Curated ecosystem of mission-critical SLA support contracts,</text>
+    <text x="75" y="278" class="subtitle-text">Technical Account Management (TAM), and self-hosted helpdesks.</text>
+  </g>
+
+  <!-- Bottom Metric Highlights on the Left -->
+  <g>
+    <rect x="75" y="318" width="170" height="48" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+    <text x="90" y="340" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">CLOUD HYPERSCALERS</text>
+    <text x="90" y="358" font-family="sans-serif" font-size="14" font-weight="700" fill="#38bdf8">AWS • Google • NOW</text>
+
+    <rect x="260" y="318" width="180" height="48" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+    <text x="275" y="340" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">OPEN-SOURCE TRIAGE</text>
+    <text x="275" y="358" font-family="sans-serif" font-size="14" font-weight="700" fill="#a855f7">Chatwoot • Zammad • GLPI</text>
+
+    <rect x="455" y="318" width="165" height="48" rx="10" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+    <text x="470" y="340" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">FASTEST RESPONSE</text>
+    <text x="470" y="358" font-family="sans-serif" font-size="14" font-weight="700" fill="#34d399">≤ 15-Minute SLA</text>
+  </g>
+</svg>
